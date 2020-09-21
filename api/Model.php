@@ -1,5 +1,5 @@
 <?php
-namespace Modules\BaseX\Remote {
+namespace Modules\BaseX\Api {
     use Components\Validator;
     use Components\Validation;    
     class Model extends \Modules\Node\Xml\Model {

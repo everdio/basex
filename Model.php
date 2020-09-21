@@ -20,11 +20,11 @@ namespace Modules\BaseX {
         public function setup() {
             $xpath = new \DOMXPath($this->fetchDOM($this->query));
             foreach ($xpath->query("//*") as $node) {
-                $model = new \Modules\BaseX\Remote\Model;
+                $model = new \Modules\BaseX\Api\Model;
                 $model->request = sprintf("%s\%s", $this->namespace, $this->class);
                 $model->node = $node;
                 $model->namespace = sprintf("%s\%s", $this->namespace, $this->class);
-                $model->use = "\Modules\BaseX\Remote";
+                $model->use = "\Modules\BaseX\Api";
                 $model->setup();       
             }                
         }
