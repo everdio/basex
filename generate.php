@@ -7,8 +7,8 @@ $model->password = $this->basex["password"];
 $model->host = $this->basex["database"];
 $model->query = $this->basex["path"];   
 $model->tag = $this->model["tag"];
-
 $model->setup();
+
 echo sprintf("%s\%s", $model->namespace, $model->class) . PHP_EOL;
 ob_flush();
 
